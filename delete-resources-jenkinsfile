@@ -7,19 +7,6 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
         AWS_DEFAULT_REGION = "us-east-1"
     }
-    stages {
-        stage("Deleting all deployments: sock-shop-app microservice, webpage and a Monitoring system to EKS") {
-            steps {
-                script {
-                    dir('k8s') {
-                        sh "kubectl delete -f sock-shop-app/"
-                        sh "kubectl delete -f web-page/"
-                        sh "kubectl delete -f monitoring-stack"
-                        sh "kubectl delete -f alerting-stack"
-                    }
-                }
-            }
-        }
         stage("Deleting the EKS Cluster and all resources created") {
             steps {
                 script {

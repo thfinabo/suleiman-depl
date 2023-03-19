@@ -11,7 +11,7 @@ pipeline {
         stage("Deleting the EKS Cluster and all resources created") {
             steps {
                 script {
-                    dir('eks-cluster') {
+                    dir('eks-cluster-tf-scripts') {
                         sh "terraform destroy --auto-approve"
                     }
                 }

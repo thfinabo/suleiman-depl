@@ -3,6 +3,7 @@ kind: Service
 metadata:
   annotations:
     prometheus.io/scrape: 'true'
+    service.kubernetes.io/aws-load-balancer-type: nlb
   labels:
     name: prometheus
   name: prometheus

@@ -2,35 +2,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user
+  name: orders
   labels:
-    name: user
+    name: orders
   namespace: sock-shop
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: user
+      name: orders
   template:
     metadata:
       labels:
-        name: user
+        name: orders
     spec:
       containers:
-      - name: user
-        image: weaveworksdemos/user:0.4.7
+      - name: orders
+        image: weaveworksdemos/orders:0.4.7
+        env:
+         - name: JAVA_OPTS
+           value: -Xms64m -Xmx128m -XX:+UseG1GC -Djava.security.egd=file:/dev/urandom -Dspring.zipkin.enabled=false
         resources:
           limits:
-            cpu: 300m
-            memory: 200Mi
+            cpu: 500m
+            memory: 500Mi
           requests:
             cpu: 100m
-            memory: 100Mi
+            memory: 300Mi
         ports:
         - containerPort: 80
-        env:
-        - name: mongo
-          value: user-db:27017
         securityContext:
           runAsNonRoot: true
           runAsUser: 10001
@@ -40,34 +40,29 @@ spec:
             add:
               - NET_BIND_SERVICE
           readOnlyRootFilesystem: true
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 80
-          initialDelaySeconds: 300
-          periodSeconds: 3
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 80
-          initialDelaySeconds: 180
-          periodSeconds: 3
+        volumeMounts:
+        - mountPath: /tmp
+          name: tmp-volume
+      volumes:
+        - name: tmp-volume
+          emptyDir:
+            medium: Memory
       nodeSelector:
-        beta.kubernetes.io/os: linux
+        kubernetes.io/os: linux
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: user
+  name: orders
   annotations:
         prometheus.io/scrape: 'true'
   labels:
-    name: user
+    name: orders
   namespace: sock-shop
 spec:
   ports:
   - port: 80
     targetPort: 80
   selector:
-    name: user
+    name: orders
 

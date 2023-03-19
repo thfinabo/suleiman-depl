@@ -1,0 +1,26 @@
+#!/usr/bin/env groovy
+
+pipeline {
+    agent any
+    environment {
+        AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
+        AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
+        AWS_DEFAULT_REGION = "us-east-1"
+    }
+    stages {
+        stage("Deploying some part of the monitoring system -Prometheus- and my web-app to EKS") {
+            steps {
+                script {
+                    dir('k8s-manifests') {
+           		sh "aws eks --region us-east-1 update-kubeconfig --name cicd-cluster"
+           		sh "kubectl apply -f monitoring-stack/00-monitoring-ns.yaml"
+                        sh "kubectl create -f monitoring-stack/prometheus/"
+                        sh "kubectl create -f monitoring-stack/kubestate/"
+                        sh "kubectl create -f monitoring-stack/grafana-1/"
+                        sh "kubectl create -f web-page/"                        
+                    }
+                }
+            }
+        }
+    }
+}

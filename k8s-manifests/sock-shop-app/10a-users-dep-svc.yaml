@@ -2,32 +2,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: payment
+  name: user
   labels:
-    name: payment
+    name: user
   namespace: sock-shop
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: payment
+      name: user
   template:
     metadata:
       labels:
-        name: payment
+        name: user
     spec:
       containers:
-      - name: payment
-        image: weaveworksdemos/payment:0.4.3
+      - name: user
+        image: weaveworksdemos/user:0.4.7
         resources:
           limits:
-            cpu: 200m
+            cpu: 300m
             memory: 200Mi
           requests:
-            cpu: 99m
+            cpu: 100m
             memory: 100Mi
         ports:
         - containerPort: 80
+        env:
+        - name: mongo
+          value: user-db:27017
         securityContext:
           runAsNonRoot: true
           runAsUser: 10001
@@ -50,21 +53,21 @@ spec:
           initialDelaySeconds: 180
           periodSeconds: 3
       nodeSelector:
-        beta.kubernetes.io/os: linux
+        kubernetes.io/os: linux
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: payment
+  name: user
   annotations:
         prometheus.io/scrape: 'true'
   labels:
-    name: payment
+    name: user
   namespace: sock-shop
 spec:
   ports:
   - port: 80
     targetPort: 80
   selector:
-    name: payment
+    name: user
 

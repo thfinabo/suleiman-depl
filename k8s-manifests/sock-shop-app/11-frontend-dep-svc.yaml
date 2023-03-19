@@ -5,7 +5,7 @@ metadata:
   name: front-end
   namespace: sock-shop
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: front-end
@@ -66,8 +66,8 @@ metadata:
   namespace: sock-shop
   annotations:
     prometheus.io/scrape: 'true'
-    service.beta.kubernetes.io/aws-load-balancer-type: nlb
-    service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
+    service.kubernetes.io/aws-load-balancer-type: nlb
+    service.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
 spec:
   type: LoadBalancer
   ports:
@@ -84,7 +84,7 @@ metadata:
   namespace: sock-shop
   annotations:
     prometheus.io/scrape: 'true'
-    service.beta.kubernetes.io/aws-load-balancer-type: nlb
+    service.kubernetes.io/aws-load-balancer-type: nlb
 spec:
   type: LoadBalancer
   selector:

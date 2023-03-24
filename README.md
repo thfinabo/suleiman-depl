@@ -2,6 +2,8 @@
 
 This deployment consists of a microservice app, a simple profile web page, Prometheus and Grafana all running in a Kubernetes cluster.
 
+### Kindly Find the proof of my work in the "proof-of-work" directory
+
 ### Current Structure
 
 1. eks-cluster-tf-scripts contains the terraform scripts that would be used by jenkins to deploy the kubernetes cluster on AWS.
@@ -20,6 +22,9 @@ This deployment consists of a microservice app, a simple profile web page, Prome
 
 
 ### How to build
+
+##### Pre-requisite: Duplicate the jenkins-server-tf elsewhere because, when you run terraform init, a .terraform dir would be created which would make it impossible to push to GitHub and also to make your GitHub code clean from unwanted files.
+
 1. Run the jenkins-server-tf sccript on any laptop that has the above pre-requites all installed and set up.
 	a. cd into the jenkins-server-tf dir and run the following commands
 		"terraform init"
@@ -42,6 +47,18 @@ This deployment consists of a microservice app, a simple profile web page, Prome
 	
 	a. Click on new item on the dashboard, enter a pipeline name, choose the "pipeline" type of pipeline and click ok
 	
-	b. Leave all defaults, scroll down to where 
+	b. Leave all defaults, scroll down to where to select the pipeline script from, select pipeline from Source Control Manager (SCM). Fill in the details that appears next. 
+	PS: You will need a GitHub URL here, that is where Jenkins would pull the scripts/instructions/build from. You can fork this repo or make a clone.
+	c. Follow same steps when creating deployment 2 and deployment 3, but this time around, make sure you select a "build trigger", deployment 2 should be triggered by successful deployment of deployment of 1 and also select "Quiet period" and add time to me it, about 300secs. Do same with deployment 3 but it should triggered by deployment 2 and Quiet period should be about 120secs.
+	d. When the deployment are completed, you can check your AWS GUI and navigate to load balancer, there you would find 6 LB, 2 of which are internal and 4 Internet-facing. It is from those 4 LB you would be able to access the; sock shop app, my app, prometheus and grafana. 
+	e. You can now navigate to Route53 amd set up a hosted zone, then create some record set with the load balancer's DNS setting it to CNAME type. Also not forget to make the changes in your domain name provider (e.g Namecheap...)
+	f. Doing this, you should now be able to view the applications from your set sub-domain/domain names.
 	
+## Deleting Resources
 
+	a. Copy the content of the "delete-resources-jenkinsfile" file and replace it with the jenkinsfile1 content. 
+	b. Push the changes to GitHub
+	c. Then disable deployment 2 and 3. 
+	d. Then click on build on deployment 1 and everything shall be destroyed. 
+	e. To destroy the jenkins-server, you will need to go back to the directory where you had a copy of the jenkins-server-tf dir. Open a terminal in the jenkins-server-tf directory and run the command "terraform destroy --auto-approve" and the jenkins server shall to be deleted.
+	

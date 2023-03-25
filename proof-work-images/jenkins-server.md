@@ -2,53 +2,45 @@
 
 Find below proof or work images taken from jenkins server
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 22-58-08.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j1.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 22-58-23.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j2.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 22-58-35.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j3.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 22-59-34.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j4.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-00-04.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j5.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-00-10.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j6.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-05-03.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j7.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-05-13.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j8.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-05-24.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j9.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-05-32.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j10.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-05-55.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j11.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-06-02.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j12.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-06-17.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j13.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-06-25.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j14.png "jenkins server")
 
+![jenkins server images!](/proof-work-images/images/j15.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-06-49.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j16.png "jenkins server")
 
+![jenkins server images!](/proof-work-images/images/j17.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-06-54.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j18.png "jenkins server")
 
+![jenkins server images!](/proof-work-images/images/j19.png "jenkins server")
 
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-07-12.png "jenkins server")
+![jenkins server images!](/proof-work-images/images/j20.png "jenkins server")
 
-
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-20-55.png "jenkins server")
-
-
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-53-34.png "jenkins server")
-
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-53-45.png "jenkins server")
-
-![jenkins server images!](/proof-work-images/images/Screenshot from 2023-03-24 23-55-07.png "jenkins server")
-
-
-
+![jenkins server images!](/proof-work-images/images/j21.png "jenkins server")
 

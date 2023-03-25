@@ -2,22 +2,22 @@
 
 Find below proof or work images taken from grafana
 
-![grafana images!](/proof-work-images/images/Screenshot from 2023-03-24 22-49-26.png "grafana")
+![grafana images!](/proof-work-images/images/g1.png "grafana")
 
-![grafana images!](/proof-work-images/images/Screenshot from 2023-03-24 22-49-37.png "grafana")
+![grafana images!](/proof-work-images/images/g2.png "grafana")
 
-![grafana images!](/proof-work-images/images/Screenshot from 2023-03-24 22-50-15.png "grafana")
+![grafana images!](/proof-work-images/images/g3.png "grafana")
 
-![grafana images!](/proof-work-images/images/Screenshot from 2023-03-24 22-50-21.png "grafana")
+![grafana images!](/proof-work-images/images/g4.png "grafana")
 
-![grafana images!](/proof-work-images/images/Screenshot from 2023-03-24 22-50-26.png "grafana")
+![grafana images!](/proof-work-images/images/g5.png "grafana")
 
-![grafana images!](/proof-work-images/images/Screenshot from 2023-03-24 22-50-40.png "grafana")
+![grafana images!](/proof-work-images/images/g6.png "grafana")
 
-![grafana images!](/proof-work-images/images/Screenshot from 2023-03-24 22-50-48.png "grafana")
+![grafana images!](/proof-work-images/images/g7.png "grafana")
 
-![grafana images!](/proof-work-images/images/Screenshot from 2023-03-24 22-56-53.png "grafana")
+![grafana images!](/proof-work-images/images/g8.png "grafana")
 
-![grafana images!](/proof-work-images/images/Screenshot from 2023-03-24 22-56-59.png "grafana")
+![grafana images!](/proof-work-images/images/g9.png "grafana")
 
 
